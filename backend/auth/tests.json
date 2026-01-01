@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "name": "Login with admin credentials",
+      "method": "POST",
+      "body": {
+        "action": "login",
+        "username": "admin",
+        "password": "stepan12"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "isAdmin": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get pending submissions",
+      "method": "GET",
+      "path": "/?status=pending",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "submissions": []
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

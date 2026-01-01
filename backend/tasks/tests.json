@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "name": "Get published tasks",
+      "method": "GET",
+      "path": "/?action=list",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "tasks": []
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create new task",
+      "method": "POST",
+      "body": {
+        "action": "create",
+        "title": "Test Task",
+        "description": "Test description",
+        "reward": 100,
+        "difficulty": "easy",
+        "created_by": 1
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "task": {
+          "title": "string"
+        }
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
